@@ -1,0 +1,10 @@
+<section>
+	<p>User info:</p>
+	<ul ng-repeat="user in users">
+		<li ng-bind="'Name: '+user.name"></li>
+		<li ng-bind="'Email: '+user.email"></li>
+		<li ng-bind="'Phone: '+user.phone"></li>
+		<li ng-bind="'Annual Income: '+(user.income | currency)"></li>
+		<li ng-bind="$index"></li>
+	</ul>
+</section>

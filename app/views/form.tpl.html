@@ -1,0 +1,28 @@
+<form name="FormCtrl.myForm" novalidate ng-submit="FormCtrl.submitUser(FormCtrl.user)">
+	<!--Name-->
+	<div class="form-group">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" class="form-control" ng-model="FormCtrl.user.name" required>
+
+		<!--when there is an error in the name field, show the following error message-->
+		<span style="color: red" ng-if="FormCtrl.myForm.name.$dirty && FormCtrl.myForm.name.$invalid">This field went invalid!</span>
+	</div>
+	<!--email-->
+	<div class="form-group">
+		<label for="email">Email:</label>
+		<input type="text" id="email" name="email" class="form-control" ng-model="FormCtrl.user.email" required>
+	</div>
+	<!--phone-->
+	<div class="form-group">
+		<label for="phone">Phone:</label>
+		<input type="text" id="phone" name="phone" class="form-control" ng-model="FormCtrl.user.phone">
+	</div>
+	<!--income-->
+	<div class="form-group">
+		<label for="income">Income:</label>
+		<input type="text" id="income" name="income" class="form-control" ng-model="FormCtrl.user.income">
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-success" ng-disabled="FormCtrl.myForm.$invalid">Submit</button>
+	</div>
+</form>
